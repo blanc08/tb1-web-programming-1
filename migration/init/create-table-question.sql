@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS questions (
-    id NOT NULL PRIMARY KEY,
-    quizId NOT NULL,
+    id INT NOT NULL PRIMARY KEY,
+    quizId INT NOT NULL,
     attachment VARCHAR(255) NOT NULL,
     body LONGTEXT NOT NULL,
     option_a TEXT NOT NULL,

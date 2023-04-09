@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS replies (
-    id NOT NULL PRIMARY KEY,
+    id INT NOT NULL PRIMARY KEY,
     userId INT NOT NULl,
     forumId INT NOT NULl,
     title VARCHAR(255) NOT NULL,
