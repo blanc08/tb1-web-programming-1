@@ -14,5 +14,5 @@ CREATE TABLE IF NOT EXISTS questions (
     attachment_d VARCHAR(255) NOT NULL,
     attachment_e VARCHAR(255) NOT NULL,
     answer VARCHAR(255) NOT NULL,
-    FOREIGN KEY (quizId) REFERENCES quizzes(id),
+    FOREIGN KEY (quizId) REFERENCES quizzes(id)
 );
