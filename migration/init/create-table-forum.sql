@@ -4,4 +4,4 @@ CREATE TABLE IF NOT EXISTS forums (
     title VARCHAR(255) NOT NULL,
     publishDate VARCHAR(50) NOT NULL,
     FOREIGN KEY (userId) REFERENCES users(id)
-)   
+);

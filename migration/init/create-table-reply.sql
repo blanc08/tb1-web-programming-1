@@ -7,4 +7,4 @@ CREATE TABLE IF NOT EXISTS replies (
     attachment VARCHAR(255) NOT NULL,
     FOREIGN KEY (userId) REFERENCES users(id),
     FOREIGN KEY (forumId) REFERENCES forums(id)
-)
+);

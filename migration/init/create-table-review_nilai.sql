@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS review_nilai (
     nilai INT(10) NOT NULL,
     FOREIGN KEY (userId) REFERENCES users(id),
     FOREIGN KEY (quizId) REFERENCES quizzes(id)
-)
+);

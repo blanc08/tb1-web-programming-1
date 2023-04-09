@@ -4,4 +4,4 @@ CREATE TABLE IF NOT EXISTS users (
     password VARCHAR(255) NOT NULL,
     level enum('teacher', 'student') NOT NULL,
     nama VARCHAR(50) NOT NULL
-)
+);
