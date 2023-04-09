@@ -1,0 +1,1 @@
+CREATE DATABASE IF NOT EXISTS tb1_aplikasi_ujian;
