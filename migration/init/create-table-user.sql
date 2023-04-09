@@ -1,5 +1,5 @@
-CREATE TABLE IF NOT EXISTS user (
-    id NOT NULL PRIMARY KEY,
+CREATE TABLE IF NOT EXISTS users (
+    id INT NOT NULL PRIMARY KEY,
     email VARCHAR(50) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
     level enum('teacher', 'student') NOT NULL,
