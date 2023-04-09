@@ -71,6 +71,12 @@ https://templatemo.com/tm-561-purple-buzz
     </nav>
     <!-- Close Header -->
 
+    <?php
+    $mysqli = new mysqli("localhost", "root", "root", "tb1_aplikasi_ujian");
+    $dataQuis = $mysqli->query('SELECT * FROM quizzes');
+    $dataMataPelajaran = $mysqli->query('SELECT mata_pelajaran FROM quizzes GROUP BY mata_pelajaran');
+    ?>
+
     <!-- Start Service -->
     <section class="service-wrapper py-3">
         <div class="container-fluid py-4">
@@ -98,18 +104,13 @@ https://templatemo.com/tm-561-purple-buzz
                         <a class="filter-btn nav-link btn-outline-primary active shadow rounded-pill text-light px-4 light-300"
                             href="#" data-filter=".project">All</a>
                     </li>
-                    <li class="nav-item mx-lg-4">
-                        <a class="filter-btn nav-link btn-outline-primary rounded-pill text-light px-4 light-300"
-                            href="#" data-filter=".graphic">Graphics</a>
-                    </li>
-                    <li class="filter-btn nav-item mx-lg-4">
-                        <a class="filter-btn nav-link btn-outline-primary rounded-pill text-light px-4 light-300"
-                            href="#" data-filter=".ui">UI/UX</a>
-                    </li>
-                    <li class="nav-item mx-lg-4">
-                        <a class="filter-btn nav-link btn-outline-primary rounded-pill text-light px-4 light-300"
-                            href="#" data-filter=".branding">Branding</a>
-                    </li>
+                    <?php while ($value = mysqli_fetch_assoc($dataMataPelajaran)): ?>
+                        <li class="nav-item mx-lg-4">
+                            <a class="filter-btn nav-link btn-outline-primary rounded-pill text-light px-4 light-300"
+                                href="#"
+                                data-filter=".<?= strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $value['mata_pelajaran']))) ?>"><?= $value['mata_pelajaran'] ?></a>
+                        </li>
+                    <?php endwhile ?>
                 </ul>
             </div>
         </div>
@@ -120,120 +121,32 @@ https://templatemo.com/tm-561-purple-buzz
         <div class="row gx-5 gx-sm-3 gx-lg-5 gy-lg-5 gy-3 pb-3 projects">
 
             <!-- Start Recent Work -->
-            <div class="col-xl-3 col-md-4 col-sm-6 project ui branding">
-                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                    <img class="service card-img" src="./assets/img/services-01.jpg" alt="Card image">
-                    <div class="service-work-vertical card-img-overlay d-flex align-items-end">
-                        <div class="service-work-content text-left text-light">
-                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">UI/UX
-                                design</span>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-                        </div>
-                    </div>
-                </a>
-            </div><!-- End Recent Work -->
+            <?php while ($value = mysqli_fetch_assoc($dataQuis)): ?>
 
-            <!-- Start Recent Work -->
-            <div class="col-xl-3 col-md-4 col-sm-6 project ui graphic">
-                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                    <img class="card-img" src="./assets/img/services-02.jpg" alt="Card image">
-                    <div class="service-work-vertical card-img-overlay d-flex align-items-end">
-                        <div class="service-work-content text-left text-light">
-                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Social
-                                Media</span>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                <div
+                    class="col-xl-3 col-md-4 col-sm-6 project <?= strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $value['mata_pelajaran']))) ?>">
+                    <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                        <img class="service card-img" src="./assets/img/services-01.jpg" alt="Card image">
+                        <div class="service-work-vertical card-img-overlay d-flex align-items-end">
+                            <div class="service-work-content text-left text-light">
+                                <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">
+                                    <?= $value['nama'] ?>
+                                </span>
+                                <p class="card-text">
+                                    <?= $value['mata_pelajaran'] ?> -
+                                    <?= $value['timer'] ?>
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div><!-- End Recent Work -->
+                    </a>
+                </div>
+            <?php endwhile; ?>
+            <!-- End Recent Work -->
 
-            <!-- Start Recent Work -->
-            <div class="col-xl-3 col-md-4 col-sm-6 project branding">
-                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                    <img class="card-img" src="./assets/img/services-03.jpg" alt="Card image">
-                    <div class="service-work-vertical card-img-overlay d-flex align-items-end">
-                        <div class="service-work-content text-left text-light">
-                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Marketing</span>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-                        </div>
-                    </div>
-                </a>
-            </div><!-- End Recent Work -->
-
-            <!-- Start Recent Work -->
-            <div class="col-xl-3 col-md-4 col-sm-6 project ui graphic">
-                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                    <img class="card-img" src="./assets/img/services-04.jpg" alt="Card image">
-                    <div class="service-work-vertical card-img-overlay d-flex align-items-end">
-                        <div class="service-work-content text-left text-light">
-                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Graphic</span>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-                        </div>
-                    </div>
-                </a>
-            </div><!-- End Recent Work -->
-
-            <!-- Start Recent Work -->
-            <div class="col-xl-3 col-md-4 col-sm-6 project ui graphic">
-                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                    <img class="card-img" src="./assets/img/services-05.jpg" alt="Card image">
-                    <div class="service-work-vertical card-img-overlay d-flex align-items-end">
-                        <div class="service-work-content text-left text-light">
-                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Digtal
-                                Marketing</span>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-                        </div>
-                    </div>
-                </a>
-            </div><!-- End Recent Work -->
-
-            <!-- Start Recent Work -->
-            <div class="col-xl-3 col-md-4 col-sm-6 project branding">
-                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                    <img class="card-img" src="./assets/img/services-06.jpg" alt="Card image">
-                    <div class="service-work-vertical card-img-overlay d-flex align-items-end">
-                        <div class="service-work-content text-left text-light">
-                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Market
-                                Research</span>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-                        </div>
-                    </div>
-                </a>
-            </div><!-- End Recent Work -->
-
-            <!-- Start Recent Work -->
-            <div class="col-xl-3 col-md-4 col-sm-6 project branding">
-                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                    <img class="card-img" src="./assets/img/services-07.jpg" alt="Card image">
-                    <div class="service-work-vertical card-img-overlay d-flex align-items-end">
-                        <div class="service-work-content text-left text-light">
-                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Business</span>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-                        </div>
-                    </div>
-                </a>
-            </div><!-- End Recent Work -->
-
-            <!-- Start Recent Work -->
-            <div class="col-xl-3 col-md-4 col-sm-6 project ui graphic branding">
-                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                    <img class="card-img" src="./assets/img/services-08.jpg" alt="Card image">
-                    <div class="service-work-vertical card-img-overlay d-flex align-items-end">
-                        <div class="service-work-content text-left text-light">
-                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Branding</span>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-                        </div>
-                    </div>
-                </a>
-            </div><!-- End Recent Work -->
 
         </div>
     </section>
     <!-- End Service -->
-
-
-
-
 
 
     <!-- Start View Work -->
@@ -259,7 +172,6 @@ https://templatemo.com/tm-561-purple-buzz
     <footer class="bg-secondary pt-4">
         <div class="container">
             <div class="row py-4">
-
                 <div class="col-lg-3 col-12 align-left">
                     <a class="navbar-brand" href="index.html">
                         <i class='bx bx-buildings bx-sm text-light'></i>
@@ -297,7 +209,6 @@ https://templatemo.com/tm-561-purple-buzz
                         </li>
                     </ul>
                 </div>
-
                 <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
                     <h3 class="h4 pb-lg-3 text-light light-300">Our Company</h2>
                         <ul class="list-unstyled text-light light-300">
@@ -323,7 +234,6 @@ https://templatemo.com/tm-561-purple-buzz
                             </li>
                         </ul>
                 </div>
-
                 <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
                     <h2 class="h4 pb-lg-3 text-light light-300">Our Works</h2>
                     <ul class="list-unstyled text-light light-300">
@@ -353,7 +263,6 @@ https://templatemo.com/tm-561-purple-buzz
                         </li>
                     </ul>
                 </div>
-
                 <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
                     <h2 class="h4 pb-lg-3 text-light light-300">For Client</h2>
                     <ul class="list-unstyled text-light light-300">
@@ -367,10 +276,8 @@ https://templatemo.com/tm-561-purple-buzz
                         </li>
                     </ul>
                 </div>
-
             </div>
         </div>
-
         <div class="w-100 bg-primary py-3">
             <div class="container">
                 <div class="row pt-2">
@@ -388,7 +295,6 @@ https://templatemo.com/tm-561-purple-buzz
                 </div>
             </div>
         </div>
-
     </footer>
     <!-- End Footer -->
 
