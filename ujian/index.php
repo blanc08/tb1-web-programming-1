@@ -8,25 +8,26 @@
     <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
     <!-- Load Require CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/tb1-web-programming-1/assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font CSS -->
-    <link href="assets/css/boxicon.min.css" rel="stylesheet">
+    <link href="/tb1-web-programming-1/assets/css/boxicon.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- Load Tempalte CSS -->
-    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="/tb1-web-programming-1/assets/css/templatemo.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/custom.css">
-    <!--
-    
-TemplateMo 561 Purple Buzz
-
-https://templatemo.com/tm-561-purple-buzz
-
--->
+    <link rel="stylesheet" href="/tb1-web-programming-1/assets/css/custom.css">
+    <!-- TemplateMo 561 Purple Buzz https://templatemo.com/tm-561-purple-buzz -->
 
 </head>
 
 <body>
+
+    <?php
+    $slug = $_GET['slug'];
+    // var_dump($slug);
+    // die();
+    ?>
+
     <!-- Header -->
     <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
         <div class="container d-flex justify-content-between align-items-center">
@@ -71,103 +72,65 @@ https://templatemo.com/tm-561-purple-buzz
     </nav>
     <!-- Close Header -->
 
-    <?php
-    $mysqli = new mysqli("localhost", "root", "root", "tb1_aplikasi_ujian");
-    $dataQuis = $mysqli->query('SELECT * FROM quizzes');
-    $dataMataPelajaran = $mysqli->query('SELECT mata_pelajaran FROM quizzes GROUP BY mata_pelajaran');
-    ?>
-
-    <!-- Start Service -->
-    <section class="service-wrapper py-3">
-        <div class="container-fluid py-4">
-            <div class="row">
-                <!-- <h2 class="h2 text-center col-12 py-5 semi-bold-600">Services</h2> -->
-                <div class="service-header col-2 col-lg-3 text-end light-300">
-                    <i class='bx bx-gift h3 mt-1'></i>
+    <section class="bg-light w-100">
+        <div class="container">
+            <div class="row d-flex align-items-center py-5">
+                <div class="col-lg-6">
+                    <img src="/tb1-web-programming-1/assets/img/banner-img-02.svg">
                 </div>
-                <div class="service-heading col-10 col-lg-9 text-start float-end light-300">
-                    <h2 class="h3 pb-4 typo-space-line">Make Success for future</h2>
-                </div>
-            </div>
-            <p class="service-footer col-10 offset-2 col-lg-9 offset-lg-3 text-start pb-3 text-muted px-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, nisi ex sapiente deserunt quis ducimus.
-                Laborum, veniam, neque perspiciatis, sed sunt aliquid non possimus architecto officiis commodi a.
-                Accusantium a soluta ducimus! Aperiam et dolores exercitationem voluptate labore molestiae blanditiis
-                quod, in dolorum obcaecati optio dicta perspiciatis, quo minus veritatis?
-            </p>
-        </div>
+                <div class="col-lg-6 text-start">
+                    <div class=" mt-5 border-0 shadow card">
+                        <div class="card-body">
+                            <table class="w-100 table light-300">
+                                <tbody>
+                                    <tr>
+                                        <td>Nama Tryout</td>
+                                        <td>Premium 1</td>
 
-        <div class="service-tag py-5 bg-secondary">
-            <div class="col-md-12">
-                <ul class="nav d-flex justify-content-center">
-                    <li class="nav-item mx-lg-4">
-                        <a class="filter-btn nav-link btn-outline-primary active shadow rounded-pill text-light px-4 light-300"
-                            href="#" data-filter=".project">All</a>
-                    </li>
-                    <?php while ($value = mysqli_fetch_assoc($dataMataPelajaran)): ?>
-                        <li class="nav-item mx-lg-4">
-                            <a class="filter-btn nav-link btn-outline-primary rounded-pill text-light px-4 light-300"
-                                href="#"
-                                data-filter=".<?= strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $value['mata_pelajaran']))) ?>"><?= $value['mata_pelajaran'] ?></a>
-                        </li>
-                    <?php endwhile ?>
-                </ul>
-            </div>
-        </div>
+                                    </tr>
+                                    <tr>
+                                        <td>Kelas</td>
+                                        <td>PREMIUM</td>
 
-    </section>
-
-    <section class="container overflow-hidden py-5">
-        <div class="row gx-5 gx-sm-3 gx-lg-5 gy-lg-5 gy-3 pb-3 projects">
-
-            <!-- Start Recent Work -->
-            <?php while ($value = mysqli_fetch_assoc($dataQuis)): ?>
-
-                <div
-                    class="col-xl-3 col-md-4 col-sm-6 project <?= strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $value['mata_pelajaran']))) ?>">
-                    <a href="/tb1-web-programming-1/ujian?slug=<?= strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $value['nama']))) ?>"
-                        class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                        <img class="service card-img" src="./assets/img/services-01.jpg" alt="Card image">
-                        <div class="service-work-vertical card-img-overlay d-flex align-items-end">
-                            <div class="service-work-content text-left text-light">
-                                <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">
-                                    <?= $value['nama'] ?>
-                                </span>
-                                <p class="card-text">
-                                    <?= $value['mata_pelajaran'] ?> -
-                                    <?= $value['timer'] ?>
-                                </p>
+                                    </tr>
+                                    <tr>
+                                        <td>Jumlah Soal</td>
+                                        <td>
+                                            <ul>
+                                                <li>TES WAWASAN KEBANGSAAN : 30</li>
+                                                <li>TES INTELEGENSIA UMUM : 35</li>
+                                                <li>TES KARAKTERISTIK PRIBADI : 45</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="alert alert-danger align-items-center" role="alert">
+                                <h5><i class="bx bxs-error"></i>Perhatian</h5>
+                                <ul class="text-danger  list-group list-group-flush">
+                                    <li class="text-danger color-primary bg-transparent list-group-item"><small>
+                                            mengerjakan ujian, harap pastikan jaringan internet dan perangkat dalam
+                                            kondisi yang memadai.</small></li>
+                                    <li class="text-danger bg-transparent list-group-item"><small>Pilih dan isi jawaban
+                                            sesuai dengan petunjuk yang diberikan</small></li>
+                                    <li class="text-danger bg-transparent list-group-item"><small>Harap kerjakan ujian
+                                            dengan jujur</small></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <div class=" container">
+                                    <button data-link="https://skd.tryoutindonesia.com/ujian/cek//54?bytes=e3641987b6"
+                                        id="btncek" class="float-end btn btn-primary btn-sm">
+                                        Mulai Tryout
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </a>
-                </div>
-            <?php endwhile; ?>
-            <!-- End Recent Work -->
-
-
-        </div>
-    </section>
-    <!-- End Service -->
-
-
-    <!-- Start View Work -->
-    <section class="bg-secondary">
-        <div class="container py-5">
-            <div class="row d-flex justify-content-center text-center">
-                <div class="col-lg-2 col-12 text-light align-items-center">
-                    <i class='display-1 bx bxs-box bx-lg'></i>
-                </div>
-                <div class="col-lg-7 col-12 text-light pt-2">
-                    <h3 class="h4 light-300">Great transformations successful</h3>
-                    <p class="light-300">Quis ipsum suspendisse ultrices gravida.</p>
-                </div>
-                <div class="col-lg-3 col-12 pt-4">
-                    <a href="#" class="btn btn-primary rounded-pill btn-block shadow px-4 py-2">View Our Work</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End View Work -->
 
     <!-- Start Footer -->
     <footer class="bg-secondary pt-4">
@@ -301,11 +264,11 @@ https://templatemo.com/tm-561-purple-buzz
 
 
     <!-- Bootstrap -->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/tb1-web-programming-1/assets/js/bootstrap.bundle.min.js"></script>
     <!-- Load jQuery require for isotope -->
-    <script src="assets/js/jquery.min.js"></script>
+    <script src="/tb1-web-programming-1/assets/js/jquery.min.js"></script>
     <!-- Isotope -->
-    <script src="assets/js/isotope.pkgd.js"></script>
+    <script src="/tb1-web-programming-1/assets/js/isotope.pkgd.js"></script>
     <!-- Page Script -->
     <script>
         $(window).load(function () {
@@ -328,9 +291,9 @@ https://templatemo.com/tm-561-purple-buzz
         });
     </script>
     <!-- Templatemo -->
-    <script src="assets/js/templatemo.js"></script>
+    <script src="/tb1-web-programming-1/assets/js/templatemo.js"></script>
     <!-- Custom -->
-    <script src="assets/js/custom.js"></script>
+    <script src="/tb1-web-programming-1/assets/js/custom.js"></script>
 
 </body>
 
