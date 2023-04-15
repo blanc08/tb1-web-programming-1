@@ -72,7 +72,7 @@ https://templatemo.com/tm-561-purple-buzz
     <!-- Close Header -->
 
     <?php
-    $mysqli = new mysqli("localhost", "root", "", "tb1_aplikasi_ujian");
+    $mysqli = new mysqli("localhost", "root", "root", "tb1_aplikasi_ujian");
     $dataQuis = $mysqli->query('SELECT * FROM quizzes');
     $dataMataPelajaran = $mysqli->query('SELECT mata_pelajaran FROM quizzes GROUP BY mata_pelajaran');
     ?>

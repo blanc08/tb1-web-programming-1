@@ -119,10 +119,10 @@
                             </div>
                             <div class="row">
                                 <div class=" container">
-                                    <button data-link="/tb1-web-programming-1/ujian/soalujian.php"
-                                        id="btncek" class="float-end btn btn-primary btn-sm">
+                                    <a href="/tb1-web-programming-1/ujian/soalujian.php" id="btncek"
+                                        class="float-end btn btn-primary btn-sm">
                                         Mulai Tryout
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
