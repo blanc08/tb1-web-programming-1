@@ -119,7 +119,7 @@
                             </div>
                             <div class="row">
                                 <div class=" container">
-                                    <button data-link="https://skd.tryoutindonesia.com/ujian/cek//54?bytes=e3641987b6"
+                                    <button data-link="/tb1-web-programming-1/ujian/soalujian.php"
                                         id="btncek" class="float-end btn btn-primary btn-sm">
                                         Mulai Tryout
                                     </button>
