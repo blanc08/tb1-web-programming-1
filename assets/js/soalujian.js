@@ -280,9 +280,9 @@ function selesai() {
             $(".ajax-loading").show();
         },
         success: function (r) {
-            console.log(r);
-            if (r.status) {
-                window.location.href = base_url + "raport";
+            const response = JSON.parse(r);
+            if (response.message === "success") {
+                window.location.href = base_url;
             }
         },
     });
