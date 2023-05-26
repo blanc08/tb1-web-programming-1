@@ -1,6 +1,7 @@
 CREATE TABLE IF NOT EXISTS quizzes (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nama VARCHAR(50) NOT NULL,
+    slug VARCHAR(50) NOT NULL,
     mata_pelajaran VARCHAR(50) NOT NULL,
     timer INT(30) NOT NULL
 );

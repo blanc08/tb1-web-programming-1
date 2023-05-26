@@ -24,8 +24,8 @@
 
     <?php
     $slug = $_GET['slug'];
-    // var_dump($slug);
-    // die();
+    $mysqli = new mysqli("localhost", "root", "root", "tb1_aplikasi_ujian");
+    $quiz = $mysqli->query('SELECT * FROM quizzes')->fetch_array();
     ?>
 
     <!-- Header -->
@@ -84,7 +84,7 @@
                             <table class="w-100 table light-300">
                                 <tbody>
                                     <tr>
-                                        <td>Nama Tryout</td>
+                                        <td>Nama quizz</td>
                                         <td>Premium 1</td>
 
                                     </tr>
@@ -119,8 +119,8 @@
                             </div>
                             <div class="row">
                                 <div class=" container">
-                                    <a href="/tb1-web-programming-1/ujian/soalujian.php" id="btncek"
-                                        class="float-end btn btn-primary btn-sm">
+                                    <a href="/tb1-web-programming-1/ujian/workspace?slug=<?= strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $quiz['nama']))) ?>"
+                                        id="btncek" class="float-end btn btn-primary btn-sm">
                                         Mulai Tryout
                                     </a>
                                 </div>

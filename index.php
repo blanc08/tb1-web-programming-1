@@ -30,7 +30,7 @@ https://templatemo.com/tm-561-purple-buzz
     <!-- Header -->
     <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
         <div class="container d-flex justify-content-between align-items-center">
-            <a class="navbar-brand h1" href="index.html">
+            <a class="navbar-brand h1" href="/tb1-web-programming-1">
                 <i class='bx bx-buildings bx-sm text-dark'></i>
                 <span class="text-dark h4">Ujian</span> <span class="text-primary h4">Gratis</span>
             </a>
@@ -73,7 +73,7 @@ https://templatemo.com/tm-561-purple-buzz
 
     <?php
     $mysqli = new mysqli("localhost", "root", "root", "tb1_aplikasi_ujian");
-    $dataQuis = $mysqli->query('SELECT * FROM quizzes');
+    $dataQuiz = $mysqli->query('SELECT * FROM quizzes');
     $dataMataPelajaran = $mysqli->query('SELECT mata_pelajaran FROM quizzes GROUP BY mata_pelajaran');
     ?>
 
@@ -121,7 +121,7 @@ https://templatemo.com/tm-561-purple-buzz
         <div class="row gx-5 gx-sm-3 gx-lg-5 gy-lg-5 gy-3 pb-3 projects">
 
             <!-- Start Recent Work -->
-            <?php while ($value = mysqli_fetch_assoc($dataQuis)): ?>
+            <?php while ($value = mysqli_fetch_assoc($dataQuiz)): ?>
 
                 <div
                     class="col-xl-3 col-md-4 col-sm-6 project <?= strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $value['mata_pelajaran']))) ?>">
