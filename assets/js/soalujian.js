@@ -267,12 +267,13 @@ function simpan() {
 
 function selesai() {
     // simpan();
+    const idDom = document.querySelector("#quiz-id");
     ajaxcsrf();
     $.ajax({
         type: "POST",
         url: base_url + "api/simpan_akhir.php",
         data: {
-            id: id_tes,
+            id: idDom.value,
         },
         beforeSend: function () {
             simpan();

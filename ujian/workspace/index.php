@@ -110,7 +110,7 @@ $result = $mysqli->query("SELECT LAST_INSERT_ID();")->fetch_array();
                         <div class="col-sm-9">
                             <form action="localhost/tb1-web-programming-1/ujian/#" id="ujian" method="post">
 
-                                <input type="hidden" name="id" value="<?= $result[0] ?>">
+                                <input type="hidden" id="quiz-id" name="id" value="<?= $result[0] ?>">
                                 <input type="hidden" name="csrf_test_name" value="ff13272d8103abd6f4cf328562ee6bc8">
 
                                 <div class="box box-primary">
@@ -266,21 +266,16 @@ $result = $mysqli->query("SELECT LAST_INSERT_ID();")->fetch_array();
                         </div>
                     </div>
                 </section>
-                <!-- /.content -->
             </div>
-            <!-- /.container -->
         </div>
-        <!-- /.content-wrapper -->
         <footer class="main-footer">
             <div class="container">
                 <span id='current-date'></span>
                 ,
                 <span class="live-clock"></span>
             </div>
-            <!-- /.container -->
         </footer>
     </div>
-    <!-- ./wrapper -->
 
     <script src="/tb1-web-programming-1/assets/js/soalujian.js"> </script>
     <script src="/tb1-web-programming-1/assets/js/bootstrap.min.js"> </script>
