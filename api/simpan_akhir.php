@@ -1,6 +1,10 @@
 <?php
+require "../config/Database.php";
+$mysqli = new Database();
+$mysqli->connect();
+
 $id = $_POST['id'];
-$mysqli = new mysqli("localhost", "root", "root", "tb1_aplikasi_ujian");
+// $mysqli = new mysqli("localhost", "root", "root", "tb1_aplikasi_ujian");
 $selectQuery = "SELECT * FROM review_nilai WHERE id = $id";
 $quizResult = $mysqli->query($selectQuery)->fetch_assoc();
 $pecahanJawaban = explode(",", $quizResult['jawaban']);

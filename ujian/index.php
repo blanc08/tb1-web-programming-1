@@ -1,3 +1,6 @@
+<?php
+require "../config/Database.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +27,9 @@
 
     <?php
     $slug = $_GET['slug'];
-    $mysqli = new mysqli("localhost", "root", "root", "tb1_aplikasi_ujian");
+    // $mysqli = new mysqli("localhost", "root", "root", "tb1_aplikasi_ujian");
+    $mysqli = new Database();
+    $mysqli->connect();
     $quiz = $mysqli->query('SELECT * FROM quizzes')->fetch_array();
     ?>
 

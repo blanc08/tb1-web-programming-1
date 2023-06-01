@@ -8,9 +8,8 @@ let userid = "106";
 let id_tryout = "";
 
 function sisawaktu(t) {
-    console.log(t);
     // Set the date we're counting down to
-    const countDownDate = new Date(t.replace(/-/g, "/")).getTime();
+    const countDownDate = new Date(t * 1000).getTime();
 
     // Update the count down every 1 second
     const x = setInterval(function () {

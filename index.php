@@ -1,8 +1,12 @@
+<?php
+require "./config/Database.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Purple Buzz HTML Template with Bootstrap 5 Beta 1</title>
+    <title>Quizzy</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
@@ -72,7 +76,8 @@ https://templatemo.com/tm-561-purple-buzz
     <!-- Close Header -->
 
     <?php
-    $mysqli = new mysqli("localhost", "root", "root", "tb1_aplikasi_ujian");
+    $mysqli = new Database();
+    $mysqli->connect();
     $dataQuiz = $mysqli->query('SELECT * FROM quizzes');
     $dataMataPelajaran = $mysqli->query('SELECT mata_pelajaran FROM quizzes GROUP BY mata_pelajaran');
     ?>

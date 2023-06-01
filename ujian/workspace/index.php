@@ -1,9 +1,11 @@
 <?php
-
+require "../../config/Database.php";
 $slug = $_GET['slug'];
-$mysqli = new mysqli("localhost", "root", "root", "tb1_aplikasi_ujian");
+// $mysqli = new mysqli("localhost", "root", "root", "tb1_aplikasi_ujian");
+$mysqli = new Database();
+$mysqli->connect();
 $quiz = $mysqli->query("SELECT * FROM quizzes WHERE slug = '$slug'")->fetch_array();
-$quizId = $quiz['id'];
+$quizId = $quiz['id'] ?? 1;
 $userId = 1;
 
 $currentDateTime = new DateTime();
@@ -12,14 +14,9 @@ $questions = $mysqli->query("SELECT questions.* FROM questions INNER JOIN quizze
 
 // Insert dummy data
 $insertDummyQuery = "INSERT INTO review_nilai (quizId, userId, jawaban) VALUES ($quizId, $userId, '');";
-$mysqli->query($insertDummyQuery);
+$result = $mysqli->query($insertDummyQuery);
 $result = $mysqli->query("SELECT LAST_INSERT_ID();")->fetch_array();
 
-// var_dump($quiz['timer']);
-// var_dump($currentDateTime);
-// echo '<br>';
-// var_dump($currentDateTime->add(DateInterval::createFromDateString('7 hours'))->add(DateInterval::createFromDateString($quiz['timer'] . ' minutes'))->format('Y-m-d H:m:s'));
-// die();
 
 ?>
 
@@ -127,7 +124,7 @@ $result = $mysqli->query("SELECT LAST_INSERT_ID();")->fetch_array();
                                         <div class="box-tools pull-right">
                                             <span class="badge bg-red">
                                                 <span class="sisawaktu"
-                                                    data-time="<?= $currentDateTime->add(DateInterval::createFromDateString('7 hours'))->add(DateInterval::createFromDateString($quiz['timer'] . ' minutes'))->format('Y-m-d H:m:s') ?>">
+                                                    data-time="<?= $currentDateTime->add(DateInterval::createFromDateString($quiz['timer'] . ' minutes'))->getTimestamp() ?>">
                                                     Jam Menit Detik
                                                 </span></span>
                                             <button type="button" class="btn btn-box-tool" data-widget="collapse">

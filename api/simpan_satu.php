@@ -1,4 +1,9 @@
 <?php
+require "../config/Database.php";
+$mysqli = new Database();
+$mysqli->connect();
+
+
 // Decrypt Id
 $id_tes = $_POST['id'];
 $input = $_POST;
@@ -15,6 +20,6 @@ $list_jawaban = substr($list_jawaban, 0, -1);
 
 
 // save list_jawaban to jawaban column
-$mysqli = new mysqli("localhost", "root", "root", "tb1_aplikasi_ujian");
+// $mysqli = new mysqli("localhost", "root", "root", "tb1_aplikasi_ujian");
 $updateQuery = "UPDATE review_nilai SET jawaban = '$list_jawaban' WHERE id = $id_tes";
 $mysqli->query($updateQuery);
