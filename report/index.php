@@ -63,7 +63,7 @@ require "../config/Database.php";
                             <a class="nav-link btn-outline-primary rounded-pill px-3" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="about.html">About</a>
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="/tb1-web-programming-1/about">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link btn-outline-primary rounded-pill px-3" href="work.html">Work</a>
@@ -169,7 +169,7 @@ require "../config/Database.php";
                             </li>
                             <li class="pb-2">
                                 <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a
-                                    class="text-decoration-none text-light py-1" href="about.html">About Us</a>
+                                    class="text-decoration-none text-light py-1" href="/tb1-web-programming-1/about">About Us</a>
                             </li>
                             <li class="pb-2">
                                 <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a

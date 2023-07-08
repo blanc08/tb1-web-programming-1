@@ -8,15 +8,15 @@
     <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
     <!-- Load Require CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font CSS -->
-    <link href="assets/css/boxicon.min.css" rel="stylesheet">
+    <link href="../assets/css/boxicon.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- Load Tempalte CSS -->
-    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="../assets/css/templatemo.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/custom.css">
-<!--
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <!--
     
 TemplateMo 561 Purple Buzz
 
@@ -33,18 +33,22 @@ https://templatemo.com/tm-561-purple-buzz
                 <i class='bx bx-buildings bx-sm text-dark'></i>
                 <span class="text-dark h4">Purple</span> <span class="text-primary h4">Buzz</span>
             </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="navbar-toggler-success">
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
+                id="navbar-toggler-success">
                 <div class="flex-fill mx-xl-5 mb-2">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
                         <li class="nav-item">
                             <a class="nav-link btn-outline-primary rounded-pill px-3" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="about.html">About</a>
+                            <a class="nav-link btn-outline-primary rounded-pill px-3"
+                                href="/tb1-web-programming-1/about">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link btn-outline-primary rounded-pill px-3" href="work.html">Work</a>
@@ -73,13 +77,14 @@ https://templatemo.com/tm-561-purple-buzz
         <div class="container">
             <div class="row d-flex align-items-center py-5">
                 <div class="col-lg-6 text-start">
-                    <h1 class="h2 py-5 text-primary typo-space-line">About Us</h1>
+                    <h1 class="h2 py-5 text-primary typo-space-line">Belajar Cerdas Solusi Lulus Seleksi!</h1>
                     <p class="light-300">
-                        Vector illustration credit goes to <a rel="nofollow" href="http://freepik.com/" target="_blank">FreePik</a> website. Purple Buzz is provided by TemplateMo. Lorem ipsum dolor sit amet, consectetur.
+                        Yakin udah siap menghadapi tes seleksi?
+                        Sini belajar bareng, biar kamu makin paham dan pede menghadapi tes ujian.
                     </p>
                 </div>
                 <div class="col-lg-6">
-                    <img src="./assets/img/banner-img-02.svg">
+                    <img src="../assets/img/banner-img-02.svg">
                 </div>
             </div>
         </div>
@@ -94,31 +99,31 @@ https://templatemo.com/tm-561-purple-buzz
             <div class="col-lg-3">
                 <h2 class="h2 py-5 typo-space-line">Our Team</h2>
                 <p class="text-muted light-300">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    AyoBelajar telah banyak membantu siswa untuk lulus ujian ataupun belajar sejak 2019. Kami memahami
+                    masalah dan
+                    kendala belajar yang dialami siswa selama ini.
+
+                    Kami ingin membantu para siswa untuk belajar dan meraih mimpinya. Berkomitmen memberikan
+                    fasilitas belajar yang terbaik untuk meningkatkan pemahaman dan kesiapan para siswa menghadapi
+                    akademik.
                 </p>
             </div>
 
             <div class="col-lg-9 row">
                 <div class="team-member col-md-4">
-                    <img class="team-member-img img-fluid rounded-circle p-4" src="./assets/img/team-01.jpg" alt="Card image">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="../assets/img/profile-default.jpeg"
+                        alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li>John Doe</li>
-                        <li>Business Development</li>
+                        <li>Bagus Oktaviadi</li>
+                        <li>41521110008</li>
                     </ul>
                 </div>
                 <div class="team-member col-md-4">
-                    <img class="team-member-img img-fluid rounded-circle p-4" src="./assets/img/team-02.jpg" alt="Card image">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="../assets/img/profile-default.jpeg"
+                        alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li>Jane Doe</li>
-                        <li>Media Development</li>
-                    </ul>
-                </div>
-                <div class="team-member col-md-4">
-                    <img class="team-member-img img-fluid rounded-circle p-4" src="./assets/img/team-03.jpg" alt="Card image">
-                    <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                        <li>Sam</li>
-                        <li>Developer</li>
+                        <li>Muhammad Faizal Syahroni</li>
+                        <li></li>
                     </ul>
                 </div>
             </div>
@@ -157,67 +162,21 @@ https://templatemo.com/tm-561-purple-buzz
     </section>
     <!--End Our Partner-->
 
-    <!-- Start Progress -->
-    <section class="bg-white py-5">
-        <div class="container my-4">
-
-            <h1 class="creative-heading h2 pb-3">Creative & Make Perfect</h1>
-
-            <div class="creative-content row py-3">
-                <div class="col-md-5">
-                    <p class="text-muted col-lg-8 light-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida Risus.
-                    </p>
-                </div>
-                <div class="creative-progress col-md-7">
-
-                    <div class="row mt-4 mt-sm-2">
-                        <div class="col-6">
-                            <h4 class="h5">Development</h4>
-                        </div>
-                        <div class="col-6 text-right">66%</div>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-
-                    <div class="row mt-4 mt-sm-2">
-                        <div class="col-6">
-                            <h4 class="h5">Design</h4>
-                        </div>
-                        <div class="col-6 text-right">90%</div>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-
-
-                    <div class="row mt-4 mt-sm-2">
-                        <div class="col-6">
-                            <h4 class="h5">Marketing</h4>
-                        </div>
-                        <div class="col-6 text-right">74%</div>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 74%" aria-valuenow="74" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Progress -->
 
     <!-- Start Choice -->
     <section class="why-us banner-bg bg-light">
         <div class="container my-4">
             <div class="row">
                 <div class="banner-img col-lg-5">
-                    <img src="./assets/img/work.svg" class="rounded img-fluid" alt="">
+                    <img src="../assets/img/work.svg" class="rounded img-fluid" alt="">
                 </div>
                 <div class="banner-content col-lg-7 align-self-end">
                     <h2 class="h2 pb-3">Why you choose us?</h2>
                     <p class="text-muted pb-5 light-300">
-                    You are allowed to download and use this Purple Buzz template for your websites. You are <strong>not allowed</strong> to re-distribute this template ZIP file on other template websites. It is quite easy to simply copy and repost the ZIP file on any <a rel="nofollow" href="https://www.google.com/search?q=free+css" target="_blank">Free CSS collection</a> websites.</p>
+                        Kelas Bimbel Online,
+                        Coach terbaik siap menemani belajar kamu!!! Didukung dengan fasilitas terlengkap, dijamin
+                        belajar kamu akan lebih mudah dan menyenangkan.
+                    </p>
                 </div>
             </div>
         </div>
@@ -271,13 +230,18 @@ https://templatemo.com/tm-561-purple-buzz
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 mx-auto my-4 p-3">
-                    <form action="#" method="get"><h1 class="h2 text-center">Stay up to date with us</h1>
-                    <div class="input-group py-3">
-                    
-                        <input name="email" type="text" class="form-control form-control-lg rounded-pill rounded-end" id="email" placeholder="Your Email" aria-label="Your Email">
-                        <button class="btn btn-secondary text-white btn-lg rounded-pill rounded-start px-lg-4" type="submit">Subsribe</button>
-                    </div>
-                    <p class="text-center light-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua.</p>
+                    <form action="#" method="get">
+                        <h1 class="h2 text-center">Stay up to date with us</h1>
+                        <div class="input-group py-3">
+
+                            <input name="email" type="text"
+                                class="form-control form-control-lg rounded-pill rounded-end" id="email"
+                                placeholder="Your Email" aria-label="Your Email">
+                            <button class="btn btn-secondary text-white btn-lg rounded-pill rounded-start px-lg-4"
+                                type="submit">Subsribe</button>
+                        </div>
+                        <p class="text-center light-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt labore et dolore magna aliqua.</p>
                     </form>
                 </div>
             </div>
@@ -323,7 +287,7 @@ https://templatemo.com/tm-561-purple-buzz
                         </li>
                         <li class="list-inline-item m-0">
                             <a class="text-light" target="_blank" href="https://www.medium.com/">
-                                <i class='bx bxl-medium-square bx-md' ></i>
+                                <i class='bx bxl-medium-square bx-md'></i>
                             </a>
                         </li>
                     </ul>
@@ -333,19 +297,25 @@ https://templatemo.com/tm-561-purple-buzz
                     <h3 class="h4 pb-lg-3 text-light light-300">Our Company</h2>
                         <ul class="list-unstyled text-light light-300">
                             <li class="pb-2">
-                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light" href="index.html">Home</a>
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a
+                                    class="text-decoration-none text-light" href="index.html">Home</a>
                             </li>
                             <li class="pb-2">
-                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light py-1" href="about.html">About Us</a>
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a
+                                    class="text-decoration-none text-light py-1"
+                                    href="/tb1-web-programming-1/about">About Us</a>
                             </li>
                             <li class="pb-2">
-                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light py-1" href="work.html">Work</a>
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a
+                                    class="text-decoration-none text-light py-1" href="work.html">Work</a>
                             </li>
                             <li class="pb-2">
-                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i></i><a class="text-decoration-none text-light py-1" href="pricing.html">Price</a>
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i></i><a
+                                    class="text-decoration-none text-light py-1" href="pricing.html">Price</a>
                             </li>
                             <li class="pb-2">
-                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light py-1" href="contact.html">Contact</a>
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a
+                                    class="text-decoration-none text-light py-1" href="contact.html">Contact</a>
                             </li>
                         </ul>
                 </div>
@@ -354,22 +324,28 @@ https://templatemo.com/tm-561-purple-buzz
                     <h2 class="h4 pb-lg-3 text-light light-300">Our Works</h2>
                     <ul class="list-unstyled text-light light-300">
                         <li class="pb-2">
-                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light py-1" href="#">Branding</a>
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a
+                                class="text-decoration-none text-light py-1" href="#">Branding</a>
                         </li>
                         <li class="pb-2">
-                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light py-1" href="#">Business</a>
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a
+                                class="text-decoration-none text-light py-1" href="#">Business</a>
                         </li>
                         <li class="pb-2">
-                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light py-1" href="#">Marketing</a>
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a
+                                class="text-decoration-none text-light py-1" href="#">Marketing</a>
                         </li>
                         <li class="pb-2">
-                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light py-1" href="#">Social Media</a>
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a
+                                class="text-decoration-none text-light py-1" href="#">Social Media</a>
                         </li>
                         <li class="pb-2">
-                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light py-1" href="#">Digital Solution</a>
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a
+                                class="text-decoration-none text-light py-1" href="#">Digital Solution</a>
                         </li>
                         <li class="pb-2">
-                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light py-1" href="#">Graphic</a>
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a
+                                class="text-decoration-none text-light py-1" href="#">Graphic</a>
                         </li>
                     </ul>
                 </div>
@@ -378,10 +354,12 @@ https://templatemo.com/tm-561-purple-buzz
                     <h2 class="h4 pb-lg-3 text-light light-300">For Client</h2>
                     <ul class="list-unstyled text-light light-300">
                         <li class="pb-2">
-                            <i class='bx-fw bx bx-phone bx-xs'></i><a class="text-decoration-none text-light py-1" href="tel:010-020-0340">010-020-0340</a>
+                            <i class='bx-fw bx bx-phone bx-xs'></i><a class="text-decoration-none text-light py-1"
+                                href="tel:010-020-0340">010-020-0340</a>
                         </li>
                         <li class="pb-2">
-                            <i class='bx-fw bx bx-mail-send bx-xs'></i><a class="text-decoration-none text-light py-1" href="mailto:info@company.com">info@company.com</a>
+                            <i class='bx-fw bx bx-mail-send bx-xs'></i><a class="text-decoration-none text-light py-1"
+                                href="mailto:info@company.com">info@company.com</a>
                         </li>
                     </ul>
                 </div>
@@ -399,7 +377,8 @@ https://templatemo.com/tm-561-purple-buzz
                     </div>
                     <div class="col-lg-6 col-sm-12">
                         <p class="text-lg-end text-center text-light light-300">
-                            Designed by <a rel="sponsored" class="text-decoration-none text-light" href="https://templatemo.com/" target="_blank"><strong>TemplateMo</strong></a>
+                            Designed by <a rel="sponsored" class="text-decoration-none text-light"
+                                href="https://templatemo.com/" target="_blank"><strong>TemplateMo</strong></a>
                         </p>
                     </div>
                 </div>
@@ -411,11 +390,11 @@ https://templatemo.com/tm-561-purple-buzz
 
 
     <!-- Bootstrap -->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <!-- Templatemo -->
-    <script src="assets/js/templatemo.js"></script>
+    <script src="../assets/js/templatemo.js"></script>
     <!-- Custom -->
-    <script src="assets/js/custom.js"></script>
+    <script src="../assets/js/custom.js"></script>
 
 </body>
 
