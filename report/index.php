@@ -94,7 +94,7 @@ require "../config/Database.php";
                         <table id="table" class="w-100 table light-300">
                             <thead>
                                 <th>Nama</th>
-                                <th>Tryout</th>
+                                <th>Quiz</th>
                                 <th>Score</th>
                             </thead>
                             <tbody>
